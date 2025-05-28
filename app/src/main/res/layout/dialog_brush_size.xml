@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view_brush_size"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:elevation="5dp"
+    android:background="@android:color/transparent"
+    app:cardCornerRadius="10dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/brush_iv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="5dp"
+            android:padding="3dp"
+            android:src="@drawable/brush_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="5dp"
+            android:gravity="center_vertical"
+            android:text="Adjust Brush Size"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/brush_iv"
+            app:layout_constraintStart_toEndOf="@id/brush_iv"
+            app:layout_constraintTop_toTopOf="@id/brush_iv" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seekbar_progress"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="10dp"
+            android:backgroundTint="@color/white"
+            android:max="100"
+            android:progressTint="@color/black"
+            android:thumbTint="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/size_text_view"
+            app:layout_constraintStart_toStartOf="@+id/brush_iv"
+            app:layout_constraintTop_toBottomOf="@id/brush_iv" />
+
+        <TextView
+            android:id="@+id/size_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:padding="2dp"
+            android:text="0/100"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/seekbar_progress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/seekbar_progress" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
